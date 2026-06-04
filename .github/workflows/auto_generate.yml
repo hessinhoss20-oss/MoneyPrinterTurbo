@@ -3,7 +3,7 @@ name: Daily Video Generator
 on:
   schedule:
     # تشغيل الأتمتة تلقائياً كل يوم الساعة 7صباحا بتوقيت مصر
-    - cron: '0 76 * * *'
+    - cron: '0 7 * * *'
   workflow_dispatch: # يتيح لك تشغيل الأتمتة يدوياً في أي وقت للتجربة
 
 jobs:
