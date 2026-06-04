@@ -1,0 +1,30 @@
+name: Daily Video Generator
+
+on:
+  schedule:
+    # تشغيل الأتمتة تلقائياً كل يوم الساعة 7صباحا بتوقيت مصر
+    - cron: '0 76 * * *'
+  workflow_dispatch: # يتيح لك تشغيل الأتمتة يدوياً في أي وقت للتجربة
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-framework: '3.10'
+
+    - name: Install Dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run MoneyPrinterTurbo
+      env:
+        PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      run: |
+        python main.py --prompt "اكتب قصة قصيرة ومثيرة عن لغز اختفاء قارة أتلانتس، واجعل الأسلوب غامضاً ومناسباً لـ Shorts"
