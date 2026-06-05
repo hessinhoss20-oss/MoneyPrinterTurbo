@@ -27,4 +27,4 @@ on:
         PEXELS_API_KEY: ${{KuyOuxrcPQTG5s7fEB5ns3tefvNJUq8ndBDkrzr729u8VCjlTBGIicLR}}
         GEMINI_API_KEY: ${{ AQ.Ab8RN6LcIi4WPYgQPa0a0_n-sWC5sbyppPwDPt0HstaGpMHgWQ }}
       run: |
-        python main.py --prompt "اكتب قصة قصيرة ومثيرة عن لغز اختفاء قارة أتلانتس، واجعل الأسلوب غامضاً ومناسباً لـ Shorts"
+        python main.py --prompt "اكتب قصة قصيرة ومثيرة عن لغز اختفاء البشر ، واجعل الأسلوب غامضاً ومناسباً لـ Shorts"
